@@ -17,10 +17,6 @@ public class UserDao {
 
     public UserDao() {}
 
-    public void setConnectionMaker(ConnectionMaker connectionMaker) {
-        this.connectionMaker = connectionMaker;
-    }
-
     public void add(User user) throws ClassNotFoundException, SQLException {
         Connection conn = connectionMaker.makeConnection();
         //Connection conn = dataSource.getConnection();
@@ -58,22 +54,14 @@ public class UserDao {
     }
 
     public void deleteAll() throws SQLException, ClassNotFoundException {
-//        Connection conn = null;
-//        PreparedStatement ps = null;
-        try (
-            Connection conn = connectionMaker.makeConnection();
-            PreparedStatement ps = conn.prepareStatement("DELETE FROM users WHERE id = ?")
-        ) {
-            //conn = connectionMaker.makeConnection();
-            //StatementStrategy ss = new DeleteAllStatement();
-            //ps = ss.makePreparedStatement(conn);
-            ps.executeUpdate();
-        } catch (SQLException e) {
-            throw e;
-//        } finally {
-//            if (ps != null) { try { ps.close();} catch (SQLException e) {} }
-//            if (conn != null) { try {conn.close();} catch (SQLException e) {} }
-        }
+        jdbcContextWithStatementStrategy(
+                new StatementStrategy() {
+                    @Override
+                    public PreparedStatement makePreparedStatement(Connection connection) throws SQLException {
+                        return connection.prepareStatement("DELETE FROM users");
+                    }
+                }
+        );
     }
 
     public void jdbcContextWithStatementStrategy(StatementStrategy ss) throws SQLException, ClassNotFoundException {
