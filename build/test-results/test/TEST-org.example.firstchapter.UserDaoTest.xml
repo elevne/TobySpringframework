@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.example.firstchapter.UserDaoTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-05-01T01:34:48" hostname="DESKTOP-5NCR2PF" time="0.389">
+<testsuite name="org.example.firstchapter.UserDaoTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-05-14T08:54:36" hostname="DESKTOP-5NCR2PF" time="0.307">
   <properties/>
-  <testcase name="addAndGet" classname="org.example.firstchapter.UserDaoTest" time="0.369"/>
-  <testcase name="getUserInstance" classname="org.example.firstchapter.UserDaoTest" time="0.019"/>
+  <testcase name="sqlExceptione" classname="org.example.firstchapter.UserDaoTest" time="0.307"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[5월 01, 2023 10:34:48 오전 org.springframework.test.context.support.AbstractTestContextBootstrapper getDefaultTestExecutionListenerClassNames
+  <system-err><![CDATA[5월 14, 2023 5:54:35 오후 org.springframework.test.context.support.AbstractTestContextBootstrapper getDefaultTestExecutionListenerClassNames
 정보: Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-5월 01, 2023 10:34:48 오전 org.springframework.test.context.support.AbstractTestContextBootstrapper instantiateListeners
+5월 14, 2023 5:54:36 오후 org.springframework.test.context.support.AbstractTestContextBootstrapper instantiateListeners
 정보: Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
-5월 01, 2023 10:34:48 오전 org.springframework.test.context.support.AbstractTestContextBootstrapper getTestExecutionListeners
-정보: Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@a9cd3b1, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@13e39c73, org.springframework.test.context.support.DirtiesContextTestExecutionListener@64cd705f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@9225652, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@654f0d9c]
-5월 01, 2023 10:34:48 오전 org.springframework.context.support.AbstractApplicationContext prepareRefresh
-정보: Refreshing org.springframework.context.support.GenericApplicationContext@6c80d78a: startup date [Mon May 01 10:34:48 KST 2023]; root of context hierarchy
-Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
+5월 14, 2023 5:54:36 오후 org.springframework.test.context.support.AbstractTestContextBootstrapper getTestExecutionListeners
+정보: Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1ddf84b8, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1139b2f3, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7a69b07, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5e82df6a, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3f197a46]
+5월 14, 2023 5:54:36 오후 org.springframework.context.support.AbstractApplicationContext prepareRefresh
+정보: Refreshing org.springframework.context.support.GenericApplicationContext@5ffead27: startup date [Sun May 14 17:54:36 KST 2023]; root of context hierarchy
+5월 14, 2023 5:54:36 오후 org.springframework.jdbc.support.SQLErrorCodesFactory <init>
+정보: SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+5월 14, 2023 5:54:36 오후 org.springframework.context.support.AbstractApplicationContext doClose
+정보: Closing org.springframework.context.support.GenericApplicationContext@5ffead27: startup date [Sun May 14 17:54:36 KST 2023]; root of context hierarchy
 ]]></system-err>
 </testsuite>

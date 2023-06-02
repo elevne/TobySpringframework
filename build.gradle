@@ -27,7 +27,9 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     testImplementation 'org.springframework:spring-test:5.0.2.RELEASE'
     implementation 'mysql:mysql-connector-java:8.0.33'
-
+    implementation 'javax.mail:javax.mail-api:1.6.2'
+    implementation 'org.springframework:spring-context-support:4.0.4.RELEASE'
+    testImplementation 'org.mockito:mockito-core:1.9.5'
 }
 
 tasks.named('test') {
